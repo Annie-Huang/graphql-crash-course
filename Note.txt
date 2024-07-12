@@ -1,0 +1,7 @@
+GraphQL Course for Beginners (https://www.youtube.com/watch?v=5199E50O7SI)
+
+https://github.com/iamshaunjp/graphql-crash-course
+https://github.com/Annie-Huang/graphql-crash-course
+
+https://www.apollographql.com/docs/apollo-server/getting-started
+---------------------------------------------------------------------------------
