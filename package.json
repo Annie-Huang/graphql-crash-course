@@ -17,5 +17,9 @@
     "url": "https://github.com/Annie-Huang/graphql-crash-course/issues"
   },
   "homepage": "https://github.com/Annie-Huang/graphql-crash-course#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "graphql": "^16.9.0"
+  }
 }
