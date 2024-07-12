@@ -5,3 +5,5 @@ https://github.com/Annie-Huang/graphql-crash-course
 
 https://www.apollographql.com/docs/apollo-server/getting-started
 ---------------------------------------------------------------------------------
+
+PS C:\react\graphql-crash-course> npm pkg set type='module'
