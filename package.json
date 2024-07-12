@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Annie-Huang/graphql-crash-course/issues"
   },
-  "homepage": "https://github.com/Annie-Huang/graphql-crash-course#readme"
+  "homepage": "https://github.com/Annie-Huang/graphql-crash-course#readme",
+  "type": "module"
 }
