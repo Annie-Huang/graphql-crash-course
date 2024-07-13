@@ -2,10 +2,15 @@ import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 
 // db
-import db from './_db';
+// https://stackoverflow.com/questions/65551383/typescript-node-error-err-module-not-found-cannot-find-module
+// Have to use .js file in order to by pass the error below
+// Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\react\graphql-crash-course\dist\_db' imported from C:\react\graphql-crash-course\dist\index.js
+import db from './_db.js';
+// import { games, authors, reviews } from './_db.ts';
+// import games from './_db';
 
 // types
-import { typeDefs } from './schema';
+import { typeDefs } from './schema.js';
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
