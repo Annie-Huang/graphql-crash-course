@@ -1,6 +1,9 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 
+// db
+import db from './_db';
+
 // types
 import { typeDefs } from './schema';
 
@@ -24,6 +27,27 @@ const typeDefs1 = `#graphql
   }
 `;
 
+const resolvers = {
+  Query: {
+    games() {
+      return db.games;
+    },
+    authors() {
+      return db.authors;
+    },
+    reviews() {
+      return db.reviews;
+    },
+  },
+};
+
+// Example of the query from frontend:
+/*
+games {
+  title
+}
+*/
+
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 //
@@ -31,7 +55,7 @@ const typeDefs1 = `#graphql
 const server = new ApolloServer({
   // typeDefs -- definitions of the types of data author
   typeDefs,
-  // resolvers,
+  resolvers,
 });
 
 // Passing an ApolloServer instance to the `startStandaloneServer` function:
