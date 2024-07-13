@@ -89,3 +89,39 @@ query GameQuery($id: ID!) {
 
 Variable
 {"id": "1"}
+
+
+----------
+
+query GameQuery($id: ID!) {
+  author(id: $id) {
+    name,
+    reviews {
+      rating,
+      content,
+    },
+  }
+}
+
+Variable
+{"id": "2"}
+
+
+----------
+
+query ReviewQuery($id: ID!) {
+  review(id: $id) {
+    rating,
+    game {
+      title,
+      platform,
+    },
+    author {
+      name,
+      verified
+    }
+  }
+}
+
+Variable
+{"id": "1"}
