@@ -19,3 +19,14 @@ PS C:\react\graphql-crash-course> npm run start
 
 VScode, need to add extension:
 - GraphQL: Syntax Highlighting
+
+
+---------------------------
+
+query GamesQuery {
+  games {
+    title,
+    platform
+  }
+}
+
