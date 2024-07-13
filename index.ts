@@ -33,10 +33,12 @@ const typeDefs1 = `#graphql
 `;
 
 const resolvers = {
+  // Query is like the entry point of the database, it needs to match 'type Query' in the schema.ts
   Query: {
     games() {
       return db.games;
     },
+    // the first "_" is the parent object
     game(_, args) {
       return db.games.find((game) => game.id === args.id);
     },
@@ -51,6 +53,12 @@ const resolvers = {
     },
     review(_, args) {
       return db.reviews.find((review) => review.id === args.id);
+    },
+  },
+  Game: {
+    // this is to follow up from "game(_, args)" in above, where we already have 1 game in return,
+    reviews(parent) {
+      return db.reviews.filter((r) => r.game_id === parent.id);
     },
   },
 };
