@@ -10,3 +10,6 @@ PS C:\react\graphql-crash-course> npm pkg set type='module'
 PS C:\react\graphql-crash-course> npm i -g npm
 PS C:\react\graphql-crash-course> npm install @apollo/server graphql
 PS C:\react\graphql-crash-course> npm install --save-dev typescript @types/node
+
+VScode, need to add extension:
+- GraphQL: Syntax Highlighting

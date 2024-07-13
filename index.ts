@@ -25,7 +25,10 @@ const typeDefs = `#graphql
 // definition and your set of resolvers.
 //
 // sever setup
-const server = new ApolloServer({});
+const server = new ApolloServer({
+  // typeDefs -- definitions of the types of data author
+  // resolvers,
+});
 
 // Passing an ApolloServer instance to the `startStandaloneServer` function:
 //  1. creates an Express app
