@@ -62,6 +62,17 @@ query ReviewQuery($id: ID!) {
 Variable
 {"id": "1"}
 
+----
 
+query ReviewQuery($id: ID!) {
+  game(id: $id) {
+    title,
+    platform,
+    id
+  }
+}
+
+Variable
+{"id": "3"}
 
 
