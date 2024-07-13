@@ -50,4 +50,18 @@ query GamesQuery {
   }
 }
 
+---------
+
+query ReviewQuery($id: ID!) {
+  review(id: $id) {
+    rating,
+    content,
+  }
+}
+
+Variable
+{"id": "1"}
+
+
+
 
