@@ -75,4 +75,17 @@ query ReviewQuery($id: ID!) {
 Variable
 {"id": "3"}
 
+------
 
+query GameQuery($id: ID!) {
+  game(id: $id) {
+    title,
+    reviews {
+      rating,
+      content,
+    },
+  }
+}
+
+Variable
+{"id": "1"}

@@ -61,6 +61,20 @@ const resolvers = {
       return db.reviews.filter((r) => r.game_id === parent.id);
     },
   },
+  Author: {
+    // this is to follow up from "author(_, args)" in above, where we already have 1 author in return,
+    reviews(parent) {
+      return db.reviews.filter((r) => r.author_id === parent.id);
+    },
+  },
+  Review: {
+    author(parent) {
+      return db.authors.find((a) => a.id === parent.author_id);
+    },
+    game(parent) {
+      return db.games.find((g) => g.id === parent.game_id);
+    },
+  },
 };
 
 // Example of the query from frontend:
