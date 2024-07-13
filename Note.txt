@@ -16,6 +16,7 @@ PS C:\react\graphql-crash-course> npm install --save-dev @types/node
 PS C:\react\graphql-crash-course> nodemon index     <-- this work for index.js file, not index.ts
 
 PS C:\react\graphql-crash-course> npm run start
+http://localhost:4000/
 
 VScode, need to add extension:
 - GraphQL: Syntax Highlighting
@@ -29,4 +30,24 @@ query GamesQuery {
     platform
   }
 }
+
+----
+
+query GamesQuery {
+  authors {
+    name,
+    verified
+  }
+}
+
+-----
+
+query GamesQuery {
+  reviews {
+    id,
+    rating,
+    content
+  }
+}
+
 
