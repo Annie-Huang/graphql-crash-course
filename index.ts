@@ -81,6 +81,15 @@ const resolvers = {
 
       return db.games;
     },
+    addGame(_, args) {
+      let game = {
+        ...args.game,
+        id: Math.floor(Math.random() * 10000).toString(),
+      };
+      db.games.push(game);
+
+      return game;
+    },
   },
 };
 
