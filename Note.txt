@@ -144,3 +144,19 @@ query ReviewQuery($id: ID!) {
 
 Variable
 {"id": "1"}
+
+
+-----------------
+
+// Not permanent delete, only persist until server next start up.
+
+mutation DeleteMutation($id: ID!) {
+  deleteGame(id: $id) {
+    id,
+    title,
+    platform
+  }
+}
+
+Variable
+{"id": "2"}
