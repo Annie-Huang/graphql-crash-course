@@ -160,3 +160,44 @@ mutation DeleteMutation($id: ID!) {
 
 Variable
 {"id": "2"}
+
+-------
+
+mutation AddMutation($game: AddGameInput!) {
+  addGame(game: $game) {
+    id,
+    title,
+    platform
+  }
+}
+
+Variable:
+{
+  "game": {
+    "title": "a new game",
+    "platform": ["switch", "ps5"]
+  }
+}
+-------
+
+mutation EditMutation($edit: EditGameInput!, $id: ID!) {
+  updateGame(edit: $edit, id: $id) {
+    title,
+    platform
+  }
+}
+
+Variable
+{
+  "edit": {
+    "title": "dark souls",
+  },
+  "id": "2"
+}
+Or
+{
+  "edit": {
+    "platform": ["Xbox"],
+  },
+  "id": "2"
+}
