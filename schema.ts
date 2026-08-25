@@ -3,6 +3,7 @@ export const typeDefs = `#graphql
     id: ID,
     title: String!,
     platform: [String!]!,
+    # below means each Game can have no reviews. e.g. [Reviews!] vs [Reviews!]! but when it got review, it cannot be empty string.
     reviews: [Review!],
   }
   type Review {

@@ -39,6 +39,8 @@ const resolvers = {
       return db.games;
     },
     // the first "_" is the parent object
+    // you can also input a 3rd param, which is context
+    // game(parent, args, context) {
     game(_, args) {
       return db.games.find((game) => game.id === args.id);
     },
