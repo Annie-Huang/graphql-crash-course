@@ -201,3 +201,19 @@ Or
   },
   "id": "2"
 }
+
+-------
+
+If you want to get two things back in one network call:
+query ExampleQuery {
+  games: games {
+    id
+    platform
+    title
+  }
+  reviews: reviews {
+    content
+    id
+    rating
+  }
+}
