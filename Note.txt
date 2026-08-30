@@ -217,3 +217,17 @@ query ExampleQuery {
     rating
   }
 }
+
+you can also do (not explicit properties name is also fine, it will just use the query name on the GQL side):
+query ExampleQuery {
+  games {
+    id
+    platform
+    title
+  }
+  reviews {
+    content
+    id
+    rating
+  }
+}
