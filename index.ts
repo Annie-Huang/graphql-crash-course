@@ -41,7 +41,21 @@ const resolvers = {
     // the first "_" is the parent object
     // you can also input a 3rd param, which is context
     // game(parent, args, context) {
-    game(_, args) {
+    // game(_, args, context, info) {
+    game(parent, args, context, info) {
+      console.log('Inside game(parent, args, context, info) method:');
+
+      console.log('parent=', JSON.stringify(parent)); // undefined.
+      console.log('args=', JSON.stringify(args)); // {"id":"1"}
+      console.log('context=', JSON.stringify(context)); // {}
+
+      console.log(
+        '(Also put into gameSampleInfoObjContent.json file) info=',
+        JSON.stringify(info),
+      );
+      // return in gameSampleInfoObjContent.json file
+      // 'title' is in line 39 and line 198
+
       return db.games.find((game) => game.id === args.id);
     },
     authors() {

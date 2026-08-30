@@ -1,0 +1,217 @@
+{
+  "fieldName": "game",
+  "fieldNodes": [
+    {
+      "kind": "Field",
+      "name": {
+        "kind": "Name",
+        "value": "game",
+        "loc": { "start": 37, "end": 41 }
+      },
+      "arguments": [
+        {
+          "kind": "Argument",
+          "name": {
+            "kind": "Name",
+            "value": "id",
+            "loc": { "start": 42, "end": 44 }
+          },
+          "value": {
+            "kind": "Variable",
+            "name": {
+              "kind": "Name",
+              "value": "gameId",
+              "loc": { "start": 47, "end": 53 }
+            },
+            "loc": { "start": 46, "end": 53 }
+          },
+          "loc": { "start": 42, "end": 53 }
+        }
+      ],
+      "directives": [],
+      "selectionSet": {
+        "kind": "SelectionSet",
+        "selections": [
+          {
+            "kind": "Field",
+            "name": {
+              "kind": "Name",
+              "value": "title",
+              "loc": { "start": 61, "end": 66 }
+            },
+            "arguments": [],
+            "directives": [],
+            "loc": { "start": 61, "end": 66 }
+          }
+        ],
+        "loc": { "start": 55, "end": 70 }
+      },
+      "loc": { "start": 37, "end": 70 }
+    }
+  ],
+  "returnType": "Game",
+  "parentType": "Query",
+  "path": { "key": "game", "typename": "Query" },
+  "schema": {
+    "__validationErrors": [],
+    "extensions": {},
+    "astNode": {
+      "kind": "SchemaDefinition",
+      "operationTypes": [
+        {
+          "kind": "OperationTypeDefinition",
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Query",
+              "loc": { "start": 460, "end": 465 }
+            }
+          },
+          "operation": "query"
+        },
+        {
+          "kind": "OperationTypeDefinition",
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Mutation",
+              "loc": { "start": 637, "end": 645 }
+            }
+          },
+          "operation": "mutation"
+        }
+      ]
+    },
+    "extensionASTNodes": [],
+    "_queryType": "Query",
+    "_mutationType": "Mutation",
+    "_directives": [
+      "@include",
+      "@skip",
+      "@deprecated",
+      "@specifiedBy",
+      "@oneOf"
+    ],
+    "_typeMap": {
+      "Game": "Game",
+      "ID": "ID",
+      "String": "String",
+      "Review": "Review",
+      "Int": "Int",
+      "Author": "Author",
+      "Boolean": "Boolean",
+      "Query": "Query",
+      "Mutation": "Mutation",
+      "AddGameInput": "AddGameInput",
+      "EditGameInput": "EditGameInput",
+      "__Schema": "__Schema",
+      "__Type": "__Type",
+      "__TypeKind": "__TypeKind",
+      "__Field": "__Field",
+      "__InputValue": "__InputValue",
+      "__EnumValue": "__EnumValue",
+      "__Directive": "__Directive",
+      "__DirectiveLocation": "__DirectiveLocation"
+    },
+    "_subTypeMap": {},
+    "_implementationsMap": {}
+  },
+  "fragments": {},
+  "operation": {
+    "kind": "OperationDefinition",
+    "operation": "query",
+    "name": {
+      "kind": "Name",
+      "value": "ExampleQuery",
+      "loc": { "start": 6, "end": 18 }
+    },
+    "variableDefinitions": [
+      {
+        "kind": "VariableDefinition",
+        "variable": {
+          "kind": "Variable",
+          "name": {
+            "kind": "Name",
+            "value": "gameId",
+            "loc": { "start": 20, "end": 26 }
+          },
+          "loc": { "start": 19, "end": 26 }
+        },
+        "type": {
+          "kind": "NonNullType",
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "ID",
+              "loc": { "start": 28, "end": 30 }
+            },
+            "loc": { "start": 28, "end": 30 }
+          },
+          "loc": { "start": 28, "end": 31 }
+        },
+        "directives": [],
+        "loc": { "start": 19, "end": 31 }
+      }
+    ],
+    "directives": [],
+    "selectionSet": {
+      "kind": "SelectionSet",
+      "selections": [
+        {
+          "kind": "Field",
+          "name": {
+            "kind": "Name",
+            "va": "game",
+            "loc": { "start": 37, "end": 41 }
+          },
+          "arguments": [
+            {
+              "kind": "Argument",
+              "name": {
+                "kind": "Name",
+                "value": "id",
+                "loc": { "start": 42, "end": 44 }
+              },
+              "value": {
+                "kind": "Variable",
+                "name": {
+                  "kind": "Name",
+                  "value": "gameId",
+                  "loc": { "start": 47, "end": 53 }
+                },
+                "loc": { "start": 46, "end": 53 }
+              },
+              "loc": { "start": 42, "end": 53 }
+            }
+          ],
+          "directives": [],
+          "selectionSet": {
+            "kind": "SelectionSet",
+            "selections": [
+              {
+                "kind": "Field",
+                "name": {
+                  "kind": "Name",
+                  "value": "title",
+                  "loc": { "start": 61, "end": 66 }
+                },
+                "arguments": [],
+                "directives": [],
+                "loc": { "start": 61, "end": 66 }
+              }
+            ],
+            "loc": { "start": 55, "end": 70 }
+          },
+          "loc": { "start": 37, "end": 70 }
+        }
+      ],
+      "loc": { "start": 33, "end": 72 }
+    },
+    "loc": { "start": 0, "end": 72 }
+  },
+  "variableValues": { "gameId": "1" },
+  "cacheControl": { "cacheHint": {} }
+}

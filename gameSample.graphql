@@ -1,0 +1,13 @@
+#const EAMPLE_QUERY = gql`
+#  query ExampleQuery($gameId: ID!) {
+#    game(id: $gameId) {
+#      title
+#    }
+#  }
+#`;
+
+query ExampleQuery($gameId: ID!) {
+  game(id: $gameId) {
+    title
+  }
+}
