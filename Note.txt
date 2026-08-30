@@ -1,9 +1,11 @@
 GraphQL Course for Beginners (https://www.youtube.com/watch?v=5199E50O7SI)
+The Do’s and Don’ts for your schema and GraphQL operations (https://www.youtube.com/watch?v=fG8zy1OROp4)
 
 https://github.com/iamshaunjp/graphql-crash-course
 https://github.com/Annie-Huang/graphql-crash-course
 
 https://www.apollographql.com/docs/apollo-server/getting-started
+
 ---------------------------------------------------------------------------------
 
 PS C:\react\graphql-crash-course> npm pkg set type='module'
@@ -20,6 +22,21 @@ http://localhost:4000/
 
 VScode, need to add extension:
 - GraphQL: Syntax Highlighting
+
+
+The Do’s and Don’ts for your schema and GraphQL operations:
+Schema Best Practices:
+- Create a user entry point fo ryour authenticated users
+- Evolve your graph based on client consumers use case
+- Provide a schema that doesn't cause client consumer to manipulate the returned data
+- Turn Introspection off in production and user a centralized schema repository for GraphQL tooling.
+
+Operations Best Practice:
+- Create a standard for naming operations in your organization/project
+- Validate your GraphQL operations before shipping anything to production
+- Attach client name and version to every operation's trace
+- Evolve your operations with your client version number
+
 
 
 ---------------------------
@@ -218,7 +235,7 @@ query ExampleQuery {
   }
 }
 
-you can also do (not explicit properties name is also fine, it will just use the query name on the GQL side):
+you can also do (not explicit properties name is also fine, it will just use the operation name on the GQL side):
 query ExampleQuery {
   games {
     id
@@ -231,3 +248,5 @@ query ExampleQuery {
     rating
   }
 }
+
+
